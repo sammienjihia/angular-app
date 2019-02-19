@@ -13,3 +13,20 @@
 
 <!-- conditional expression on multiple class binding -->
 <h2 [ngClass]="msgClasses">tutorial7 works!</h2>
+
+<!-- event binding -->
+<button (click)="onClick()">Greet</button>
+{{greeting}}
+<br>
+
+<!-- template reference variable -->
+<input  #myInput type="text">
+<button (click)="logInput(myInput.value)">Log input</button>
+<br>
+
+<!-- two way binding -->
+<input [(ngModel)]="first_name" type="text">
+{{first_name}}
+<br>
+<input [(ngModel)]="last_name" type="text">
+{{last_name}}

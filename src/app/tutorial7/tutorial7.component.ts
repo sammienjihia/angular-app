@@ -19,6 +19,18 @@ export class Tutorial7Component implements OnInit {
     "text-special": this.isSpecial
 
   }
+  public greeting = ""
+
+  public onClick(){
+    console.log("Welcome to angular tutorial");
+    this.greeting = "Welcome to angular tutorial"
+  }
+
+  public logInput(input_value){
+    console.log(input_value);
+  }
+
+  
 
   ngOnInit() {
   }
