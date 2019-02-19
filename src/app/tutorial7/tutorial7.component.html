@@ -30,3 +30,26 @@
 <br>
 <input [(ngModel)]="last_name" type="text">
 {{last_name}}
+
+
+<!-- structural directives -->
+<!-- ngIf -->
+<h2 *ngIf="isVisible; else elseBlock">now you see me</h2>
+
+<ng-template #elseBlock>
+  <h2>Message Hidden</h2>
+</ng-template>
+<br>
+
+<!-- alternative ngIf usage -->
+<div *ngIf="isMessage; then thenBlock; else elseBlock2"></div>
+
+<ng-template #thenBlock>
+  <h2>Then Block Message</h2>
+</ng-template>
+<ng-template #elseBlock2>
+  <h2>Else Block Message</h2>
+</ng-template>
+
+
+

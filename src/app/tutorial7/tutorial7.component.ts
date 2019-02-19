@@ -30,7 +30,12 @@ export class Tutorial7Component implements OnInit {
     console.log(input_value);
   }
 
-  
+  public first_name = "";
+  public last_name = "";
+
+  public isVisible = false;
+
+  public isMessage = false;
 
   ngOnInit() {
   }
