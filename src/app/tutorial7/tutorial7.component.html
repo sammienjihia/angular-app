@@ -1,0 +1,15 @@
+<p>
+  tutorial7 works!
+</p>
+
+<!-- Demonstrating class binding -->
+
+<h2 class="text-success">tutorial7 works!</h2>
+
+<h2 [class]="successClass">tutorial7 works!</h2>
+
+<!-- class binding using a conditional expression -->
+<h2 [class.text-danger]="isDanger">tutorial7 works!</h2>
+
+<!-- conditional expression on multiple class binding -->
+<h2 [ngClass]="msgClasses">tutorial7 works!</h2>
