@@ -1,24 +1,35 @@
-<div *ngFor="let article of articles">
 
-  <mat-card class="example-card"> 
+
+  <nav style="background-color:  #f5f5f5;">
+    < nav >
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </nav>
+  <section style="background-color:  #f5f5f5;">
     
-      <img mat-card-image src={{article.urlToImage}} alt="">
-      <mat-card-title>{{article.title}}</mat-card-title>
+    <div *ngFor="let article of articles" >
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>{{article.title}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src={{article.urlToImage}} alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>
+                {{article.content}}
+                </p>
+            </mat-card-content>
+            
+        </mat-card>
+        <br>
+    </div>
 
-      <mat-card-content>
-        <p>
-            {{article.description}}
-        </p>
-      </mat-card-content>
-      <mat-card-header>
-          <div mat-card-avatar ></div>
-          <mat-card-subtitle><h3>{{article.author}}</h3></mat-card-subtitle>
-          <mat-card-subtitle>{{article.publishedAt | date}}</mat-card-subtitle>
-      </mat-card-header>
-  </mat-card>
-  <br>
+  </section>
+  <aside style="background-color:  #f5f5f5;">
+    < aside >
+  </aside>
+
   
-
-</div>
-
 
