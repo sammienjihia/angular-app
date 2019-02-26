@@ -1,0 +1,134 @@
+@import "~material-components-web/dist/material-components-web.css";
+@import "~@material/theme/mixins";
+@import "~@material/typography/mixins";
+
+
+
+
+[mdcCard] {
+    min-width: 320px;
+    max-width: 21.875rem;
+    
+
+   
+
+    .custom-card-group-heading {
+        @include mdc-typography('subtitle2');
+        @include mdc-theme-prop(color, text-secondary-on-light);
+        padding: 8px 16px;
+    }
+
+    .custom-card-article {
+        padding: 16px;
+        text-decoration: none;
+        color: inherit;
+
+        h2 {
+            @include mdc-typography('headline5');
+            margin: 0 0 4px 0;                
+        }
+        p {
+            @include mdc-typography('body2');
+            @include mdc-theme-prop(color, text-secondary-on-light);
+            margin: 0;
+        }
+    }
+
+    
+
+   
+
+    .mdc-card__media--16-9 {
+        background-image: url(https://blox.src.zone/assets/16-9.a526994cd7b7e02c036d01740ca1c780.jpg);
+    }
+
+    .mdc-card__media--square {
+        background-image: url(https://blox.src.zone/assets/1-1.41efc0c0a64a33e5dd3bf62c59d45ae0.jpg);
+    }
+}
+*
+{
+  box-sizing: border-box;
+  font-family: 'Metrophobic', Arial, serif; font-weight: 400;
+  
+}
+.newsheadlines{
+  overflow: auto
+}
+
+header,
+nav,
+section,
+aside,
+footer
+{
+  border-radius: 5px;
+  
+}
+
+header,
+nav,
+footer
+{
+  width: 100%;
+  
+  
+}
+
+header
+{
+  margin-bottom: 50px;
+}
+
+
+nav,
+aside
+{
+  width: 25%;
+}
+
+section
+{
+  float: left;
+  width: calc(50% - 100px);
+  margin: 0 30px 30px 30px;
+}
+
+
+
+/* This position the nav on the left side */
+nav
+{
+  float: left;
+}
+
+/* This positions the aside on the right side */
+aside
+{
+  float: left;  
+}
+
+nav ul
+{
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+/* margin: top, right, bottom, left */
+nav li
+{
+  margin: 10px 0 10px 10px;
+  float: right;
+  width: 50%;
+  
+}
+
+.example-card {
+    max-width: 600px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }

@@ -1,32 +1,27 @@
 
-
-  <nav style="background-color:  #f5f5f5;">
-    < nav >
+<div class="newsheadlines">
+  <nav>
     <ul>
-      <li>Item2</li>
-      <li>Item3</li>
+      <li>Item 1 with some long ass name</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 1 with some long ass name</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      
     </ul>
-    <mat-toolbar color="primary">
-            <mat-toolbar-row>
-              <span>Custom Toolbar</span>
-            </mat-toolbar-row>
-          
-            <mat-toolbar-row>
-              <span>Second Line</span>
-              <span class="example-spacer"></span>
-              <!-- <mat-icon class="example-icon">verified_user</mat-icon> -->
-            </mat-toolbar-row>
-          
-            <mat-toolbar-row>
-              <span>Third Line</span>
-              <span class="example-spacer"></span>
-              <!-- <mat-icon class="example-icon">favorite</mat-icon>
-              <mat-icon class="example-icon">delete</mat-icon> -->
-            </mat-toolbar-row>
-          </mat-toolbar>
   </nav>
-  <section style="background-color:  #f5f5f5;">
-    
+  <section>
     <div *ngFor="let article of articles" >
         <mat-card class="example-card">
             <mat-card-header>
@@ -35,7 +30,7 @@
             <img mat-card-image src={{article.urlToImage}} alt="Photo of a Shiba Inu">
             <mat-card-content>
                 <p>
-                {{article.content}}
+                {{article.content | slice : 0:400}}
                 </p>
             </mat-card-content>
             
@@ -44,9 +39,50 @@
     </div>
 
   </section>
-  <aside style="background-color:  #f5f5f5;">
-    < aside >
+  <aside [dir]="dir" class="custom-card-container">
+        <div mdcCard [outlined]="outlined">
+            <div class="custom-card-group-heading">Headlines</div>
+        
+            <hr mdcListDivider>
+        
+            <a class="custom-card-article" mdcRipple surface href="javascript:void(0)">
+              <h2>Copper on the rise</h2>
+              <p>
+                Copper price soars amid global market optimism and increased demand.
+              </p>
+            </a>
+        
+            <hr mdcListDivider>
+        
+            <a class="custom-card-article" mdcRipple surface href="javascript:void(0)">
+              <h2>U.S. tech startups rebound</h2>
+              <p>
+                Favorable business conditions have allowed startups to secure more fundraising deals compared to last
+                year.
+              </p>
+            </a>
+        
+            <hr mdcListDivider>
+        
+            <a class="custom-card-article" mdcRipple surface href="javascript:void(0)">
+              <h2>Asia's clean energy ambitions</h2>
+              <p>
+                China plans to invest billions of dollars for the development of over 300 clean energy projects in
+                Southeast Asia.
+              </p>
+            </a>
+        
+            <hr mdcListDivider>
+        
+            <div mdcCardActions fullBleed>
+              <a mdcButton href="javascript:void(0)">
+                All Business Headlines <i class="material-icons" aria-hidden="true">arrow_forward</i>
+              </a>
+            </div>
+        </div>
   </aside>
+
+</div>
 
   
 

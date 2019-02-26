@@ -6,7 +6,7 @@ import { article } from '../articles'
 @Component({
   selector: 'app-news-headlines',
   templateUrl: './news-headlines.component.html',
-  styleUrls: ['./news-headlines.component.css']
+  styleUrls: ['./news-headlines.component.scss']
 })
 export class NewsHeadlinesComponent implements OnInit {
 
