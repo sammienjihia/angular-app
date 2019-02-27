@@ -40,45 +40,45 @@
 
   </section>
   <aside [dir]="dir" class="custom-card-container">
-        <div mdcCard [outlined]="outlined">
-            <div class="custom-card-group-heading">Headlines</div>
-        
+      <div mdcCard [outlined]="outlined"><div class="custom-card-group-heading">Headlines</div></div>
+      
+        <div mdcCard [outlined]="outlined" *ngFor="let article of articles">
+            
+
             <hr mdcListDivider>
-        
+
             <a class="custom-card-article" mdcRipple surface href="javascript:void(0)">
-              <h2>Copper on the rise</h2>
-              <p>
-                Copper price soars amid global market optimism and increased demand.
-              </p>
+              <mat-grid-list cols="5" rowHeight="100px">
+                <mat-grid-tile colspan="3" rowspan="1">
+                  <h4>{{article.title}}</h4>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="2" rowspan="1">
+                  <img style="object-fit: contain" class="trending-section" src={{article.urlToImage}}> 
+                </mat-grid-tile>
+              </mat-grid-list>
             </a>
         
+            
+
             <hr mdcListDivider>
-        
+
             <a class="custom-card-article" mdcRipple surface href="javascript:void(0)">
-              <h2>U.S. tech startups rebound</h2>
-              <p>
-                Favorable business conditions have allowed startups to secure more fundraising deals compared to last
-                year.
-              </p>
+              <mat-grid-list cols="5" rowHeight="100px">
+                <mat-grid-tile colspan="3" rowspan="1">
+                    <p>
+                        Favorable business conditions have allowed startups to secure more fundraising deals compared to last
+                        year.
+                    </p>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="2" rowspan="1">
+                  <img class="trending-section" src="https://static01.nyt.com/images/2019/02/28/world/28india-pakistan2/28india-pakistan2-facebookJumbo.jpg">
+                </mat-grid-tile>
+              </mat-grid-list>
             </a>
-        
-            <hr mdcListDivider>
-        
-            <a class="custom-card-article" mdcRipple surface href="javascript:void(0)">
-              <h2>Asia's clean energy ambitions</h2>
-              <p>
-                China plans to invest billions of dollars for the development of over 300 clean energy projects in
-                Southeast Asia.
-              </p>
-            </a>
-        
-            <hr mdcListDivider>
-        
-            <div mdcCardActions fullBleed>
-              <a mdcButton href="javascript:void(0)">
-                All Business Headlines <i class="material-icons" aria-hidden="true">arrow_forward</i>
-              </a>
-            </div>
+
+            
+            
+            
         </div>
   </aside>
 
